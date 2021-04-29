@@ -1,6 +1,8 @@
 <template>
 
     <div>
+        <LayoutComponent/>
+
         <div v-if="currentStep===1">
             <div class="container pt-5">
                 <div class="card">
@@ -64,10 +66,10 @@
 
 <script>
 import SecondComponent from "./SecondComponent";
-
+import LayoutComponent from "./LayoutComponent";
 export default {
     name: "FirstComponent",
-    components: {SecondComponent},
+    components: {SecondComponent, LayoutComponent},
     data() {
         return {
             currentStep: 1,

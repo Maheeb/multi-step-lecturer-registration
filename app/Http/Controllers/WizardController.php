@@ -41,9 +41,9 @@ class WizardController extends Controller
         }
 
 
-        $userStore= $user->save();
+        $userStore = $user->save();
 
-        if ($userStore){
+        if ($userStore) {
 
             $userInformation = new UserInformation();
 
@@ -57,7 +57,7 @@ class WizardController extends Controller
         }
 
         return response()->json([
-            'user'=>$user
+            'user' => $user
         ]);
 //        dd($request->jobs, $request->education);
 //        dd($request->jobs);
@@ -67,5 +67,10 @@ class WizardController extends Controller
     }
 
 
+    public function getAllUsers()
+    {
+        $users = User::latest()->get();
+        return response()->json($users);
+    }
 
 }

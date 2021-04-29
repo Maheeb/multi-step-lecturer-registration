@@ -1,7 +1,7 @@
 <template>
 
     <div>
-        <div class="container pt-5">
+        <div  class="container pt-5">
             <div class="card">
                 <div class="card-header">
                     <h5 class="text-center">Third Step (Please provide avatar & both parts of NID)</h5>
@@ -38,13 +38,19 @@
             </div>
 
         </div>
+
+
+
+
     </div>
 </template>
 
 <script>
+import ShowResult from "./ShowResult";
 export default {
     name: "ThirdComponent",
     props: ["basicInfo", "experiences", "educations", "publications"],
+    components: { ShowResult },
     data() {
         return {
             currentStep: '',
@@ -92,8 +98,9 @@ export default {
             formData.append("nid_second_part", this.form.nid_second_part);
 
             axios.post("/post", formData).then((res) => {
-                alert('I am here')
-                console.log("success");
+                // alert('I am here')
+                // console.log("success");
+                this.$router.push('/showResult');
             }).catch((error) => {
                 console.log(error);
             });

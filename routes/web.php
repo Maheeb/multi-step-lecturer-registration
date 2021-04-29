@@ -19,3 +19,4 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'WizardController@index');
 Route::post('/post','WizardController@store');
+Route::get('/get-all-users', 'WizardController@getAllUsers');

@@ -37,7 +37,9 @@
                     </div>
 
                 </div>
+                <strong>* Pictures should be uploaded at png format</strong>
                 <strong>* Indicates required field</strong>
+
             </div>
 
 <!--            The following code is for showing errors-->

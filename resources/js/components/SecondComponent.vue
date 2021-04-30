@@ -28,7 +28,7 @@
                                     <div class="tab-pane fade show active" id="nav-home" role="tabpanel"
                                          aria-labelledby="nav-home-tab">
 
-                                        <div class="row pb-5">
+                                        <div class="row pb-5 pt-5">
                                             <div class="col-md-12 d-flex justify-content-center">
 
                                                 <ul>
@@ -87,7 +87,7 @@
                                             </div>
                                         </div>
 
-                                        <div class="education" v-for="(publication, counter) in publications"
+                                        <div class="publication" v-for="(publication, counter) in publications"
                                              v-bind:key="counter">
 
                                             <div class="row form-group">
@@ -127,7 +127,7 @@
                                             </div>
                                         </div>
 
-                                        <div class="education" v-for="(experience, counter) in experiences"
+                                        <div class="experience" v-for="(experience, counter) in experiences"
                                              v-bind:key="counter">
 
                                             <div class="row form-group">
@@ -168,7 +168,7 @@
                 </div>
             </div>
 
-            <div class="row pt-4">
+            <div class="row pt-2">
 
                 <div class="col-md-12 d-flex justify-content-center">
                     <button type="button" class="btn btn-primary" @click.prevent="goToStep(3)">

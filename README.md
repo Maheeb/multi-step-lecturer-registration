@@ -17,3 +17,6 @@ There are also 2 additional components in this project (LayoutComponent.vue, Sho
 
 ## Glimpse of the website
 
+<img src="website_pics/3.png">
+
+:)

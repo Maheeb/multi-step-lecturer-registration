@@ -15,7 +15,7 @@ I have mainly used 3 components in this project --
 
 There are also 2 additional components in this project (LayoutComponent.vue, ShowResult.vue) which I have made for creating the navbar on top and showing output. Moreover, There is a controller in this project (WizardController) which takes care about the process of storing data in the databse. I have made necessary migration files as well.
 
-## Glimpse of the website
+## Glimpse of this project
 
 <img src="website_pics/3.png">
 

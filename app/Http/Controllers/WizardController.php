@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\User;
 use App\UserInformation;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 
 class WizardController extends Controller
 {
@@ -16,13 +17,30 @@ class WizardController extends Controller
 
     public function store(Request $request)
     {
-//        dd($request->all());
+//        The following piece of code is for validation
+        $validator = Validator::make(
+            $request->all(),
+            [
+                'name' => 'required',
+                'email' => 'required',
+                'phone' => 'required',
+                'nid' => 'required',
+                'avatar' => 'image|mimes:png',
+                'nid_first_part' => 'image|mimes:png',
+                'nid_second_part' => 'image|mimes:png'
+            ]
+        );
 
+        if ($validator->fails()) {
+            return response()->json(['success' => false, 'errors' => $validator->errors()], 422);
+        }
         $user = new User();
         $user->name = $request->name;
         $user->email = $request->email;
         $user->phone = $request->phone;
         $user->nid = $request->nid;
+        $user->address = $request->address;
+        $user->blood_group = $request->blood_group;
         if ($request->hasFile('avatar')) {
             $avatar = time() . '.' . $request->avatar->getClientOriginalExtension();
             $user->avatar = "images/avatars/{$avatar}";

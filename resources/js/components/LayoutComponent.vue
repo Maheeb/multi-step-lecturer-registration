@@ -1,5 +1,7 @@
 <template>
     <div>
+
+<!--      This is the code for navbar on the top-->
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-dark  bg-dark">
                 <div class="collapse navbar-collapse d-flex justify-content-center" id="navbarNav">

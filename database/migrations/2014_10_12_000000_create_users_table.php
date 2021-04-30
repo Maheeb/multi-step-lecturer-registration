@@ -19,6 +19,8 @@ class CreateUsersTable extends Migration
             $table->string('email')->nullable();
             $table->string('phone')->nullable();
             $table->string('nid')->nullable();
+            $table->string('address')->nullable();
+            $table->string('blood_group')->nullable();
             $table->string('avatar')->nullable();
             $table->string('nid_first_part')->nullable();
             $table->string('nid_second_part')->nullable();

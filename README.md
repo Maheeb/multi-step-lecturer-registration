@@ -20,9 +20,9 @@ There are also 2 additional components in this project (LayoutComponent.vue, Sho
 <img src="website_pics/3.png">
 
 
-<img src="website_pics/2.png">
-
-
 <img src="website_pics/1.png">
+
+
+<img src="website_pics/4.png">
 
 :)
